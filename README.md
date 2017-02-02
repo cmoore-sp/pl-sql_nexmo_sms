@@ -19,4 +19,4 @@ The features within the package are:
  - Check the balance of your account
  
  This was released in early February 2016. I will endeavour to maintain this.
- </qed>
+@cmoore_sp
