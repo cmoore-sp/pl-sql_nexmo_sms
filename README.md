@@ -3,6 +3,7 @@ This includes a PL/SQL package (specifications & body) for a series of tools rel
 a functioning, but simple Oracle APEX application. The APEX application is written in APEX 5.1 and will not likely be
 compatible with APEX 5.0.
 
+# Requirements
 The use of this tool does require the following:
  1. You MUST have an account with Nexmo.com. You can get a demo account for free.
  2. You MUST put your own Oracle Wallet Path and Wallet password into the packages and compile them (G_WALLET_PATH and G_WALLET_PWD)
@@ -13,10 +14,18 @@ The use of this tool does require the following:
  5. You'll need to create the table that is in the package body. It is in the commented out section. 
  6. You'll need to put in your own G_KEY and G_SECRET at the top of the package body.
 
+# PL/SQL Package
 The features within the package are:
  - Send SMS text message from PL/SQL
  - Do a two-factor authentication
  - Check the balance of your account
- 
- This was released in early February 2016. I will endeavour to maintain this.
+
+# Oracle APEX 5.1 Application
+There is a simple 3 page application included in the files. This application is not likely backwards compatible with
+earlier APEX versions. 
+
+The authentication method in the application defaults to your workspace user/password.
+
+This was released in early February 2016. I will endeavour to maintain this.
+
 @cmoore_sp
