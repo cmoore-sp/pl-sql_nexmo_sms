@@ -26,6 +26,21 @@ earlier APEX versions.
 
 The authentication method in the application defaults to your workspace user/password.
 
+# Nexmo
+[Nexmo](https://www.nexmo.com/) was picked almost at random. The first company I wrote an interface for disappeared, so I need
+to replace them. I searched for an SMS service with a friendly and well documented RESTful API. After a few quick interactions,
+I discovered prompt and professional support, and their documentation was pretty darn good. So I settled there.
+
+# Audience
+I have put this here for my brothers and sisters in the Oracle PL/SQL community. We can collaborate and share. If you have issues
+with Nexmo, ping them, please. You'll have a paid account with them and they are experts on their stuff.
+
+On the otherhand, my stuff is posted here for free. If you find errors or make improvements, collaborate with me and make this better. 
+
+
+## Thanks
+
 This was released in early February 2016. I will endeavour to maintain this.
 
 @cmoore_sp
+qed
