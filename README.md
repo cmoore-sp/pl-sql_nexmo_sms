@@ -3,6 +3,9 @@ This includes a PL/SQL package (specifications & body) for a series of tools rel
 a functioning, but simple Oracle APEX application. The APEX application is written in APEX 5.1 and will not likely be
 compatible with APEX 5.0.
 
+## Associated blog entry
+[Blog Entry about 2FA](http://wp.me/p6EZkg-6P)
+
 # Requirements
 The use of this tool does require the following:
  1. You MUST have an account with Nexmo.com. You can get a demo account for free.
