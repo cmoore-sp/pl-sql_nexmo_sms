@@ -34,6 +34,9 @@ The authentication method in the application defaults to your workspace user/pas
 to replace them. I searched for an SMS service with a friendly and well documented RESTful API. After a few quick interactions,
 I discovered prompt and professional support, and their documentation was pretty darn good. So I settled there.
 
+## Vonage
+I learned on 04FEB2017, that Nexmo is part of the Vonage family of products as the result of a recent purchase.
+
 # Audience
 I have put this here for my brothers and sisters in the Oracle PL/SQL community. We can collaborate and share. If you have issues
 with Nexmo, ping them, please. You'll have a paid account with them and they are experts on their stuff.
