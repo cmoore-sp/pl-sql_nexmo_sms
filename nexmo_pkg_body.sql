@@ -10,7 +10,7 @@ create or replace package body nexmo_pkg as
 --
 -- Revision History
 -- 0.1		05FEB2017
---
+-- 0.2		05FEB2017 - pulled table definition out cmoore
 ------------------------------------------------------
 
 
@@ -19,9 +19,9 @@ create or replace package body nexmo_pkg as
 	-- You will need to establish your own account with 
 	-- Nexmo. The KEY and SECRET and SENDER get pasted below
 	------------------------------------------------------
-	g_key					constant varchar2(255)	:= '**CHANGE_ME**';
+	g_key				constant varchar2(255)	:= '**CHANGE_ME**';
 	g_secret			constant varchar2(255)	:= '**CHANGE_ME**';
-	g_sender			constant varchar2(20)		:= '**CHANGE_ME**'; 
+	g_sender			constant varchar2(20)	:= '**CHANGE_ME**'; 
 
 	------------------------------------------------------
 	-- The calls are made via HTTPS so you will need your own
@@ -36,41 +36,12 @@ create or replace package body nexmo_pkg as
 	g_wallet_path	constant varchar2(255)	:= 'file:d:\app\oracle\admin\orcl\wallet\';
 	g_wallet_pwd	constant varchar2(255) 	:= '**CHANGE_ME**';
 
-	g_sms_uri			varchar2(255) := 'https://rest.nexmo.com/sms/json?';	
+	g_sms_uri	varchar2(255) := 'https://rest.nexmo.com/sms/json?';	
 	g_verify_uri	varchar2(255) := 'https://api.nexmo.com/verify/';	
-	amp				constant varchar2(1)		:= chr(38);
-	crlf			constant	varchar2(2) 	:= chr(10) || chr(13);
+	amp		constant varchar2(1)	:= chr(38);
+	crlf		constant varchar2(2) 	:= chr(10) || chr(13);
 
-	/* Table definition
-		create sequence nexmo_sms_response_seq;
-		create table nexmo_sms_response (
-			response_pk				number not null primary key,
-			status						varchar2(255),
-			message_id				varchar2(255),
-			message_to				varchar2(255),
-			message_text			varchar2(1000),
-			client_ref				varchar2(255),
-			remaining_balance	number,
-			message_price			number,
-			message_network		varchar2(255),
-			error_text				varchar2(1000),
-			code							varchar2(20),
-			ip_address				varchar2(20),
-			purpose						varchar2(20),
-			created_timestamp	timestamp
-		);
-		
-		create or replace editionable trigger nexmo_sms_response_trig
-		before insert or update on nexmo_sms_response for each row
-		begin
-			if inserting then
-				:new.response_pk := nexmo_sms_response_seq.NEXTVAL;
-				:new.created_timestamp :=CURRENT_TIMESTAMP;
-			end if;
-		end nexmo_sms_response_trig;
-		/
-		
-	*/
+	
 procedure sms_ok (
 	p_sms						in varchar2,
 	p_procedure			in varchar2,
